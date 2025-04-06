@@ -1,0 +1,21 @@
+apiVersion: argiproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-serverperformance-nodejs
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jsrankit/argocd-serverperformance-nodejs.git
+    targetRevision: HEAD
+    path: master
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: serverperformance-nodejs
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
