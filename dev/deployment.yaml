@@ -16,7 +16,7 @@ spec:
         - name: serverperformance-nodejs
           image: jsrankit/serverperformance-nodejs
           ports:
-            - containerPort: 3001
+            - containerPort: 3000
 
 ---
 
