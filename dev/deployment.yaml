@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: serverperformance-nodejs
-          image: jsrankit/serverperformance-nodejs
+          image: jsrankit/serverperformance-nodejs:14-d798ef4-20250408-2201
           ports:
             - containerPort: 3000
 
